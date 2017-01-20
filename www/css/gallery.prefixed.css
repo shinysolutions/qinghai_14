@@ -1,0 +1,103 @@
+
+.gallery .control-button,
+.gallery .control-operator:target ~ .controls .control-button {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.gallery .control-button:hover {
+  //color: rgba(255, 0, 0, 0.4);
+}
+
+ 
+.gallery .control-button:first-of-type,
+.gallery .control-operator:nth-of-type(1):target ~ .controls .control-button:nth-of-type(1),
+.gallery .control-operator:nth-of-type(2):target ~ .controls .control-button:nth-of-type(2),
+.gallery .control-operator:nth-of-type(3):target ~ .controls .control-button:nth-of-type(3),
+.gallery .control-operator:nth-of-type(4):target ~ .controls .control-button:nth-of-type(4),
+.gallery .control-operator:nth-of-type(5):target ~ .controls .control-button:nth-of-type(5),
+.gallery .control-operator:nth-of-type(6):target ~ .controls .control-button:nth-of-type(6),
+.gallery .control-operator:nth-of-type(7):target ~ .controls .control-button:nth-of-type(7),
+.gallery .control-operator:nth-of-type(8):target ~ .controls .control-button:nth-of-type(8),
+.gallery .control-operator:nth-of-type(9):target ~ .controls .control-button:nth-of-type(9) {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.gallery .item:first-of-type {
+  position: static;
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.gallery .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity .5s;
+  -o-transition: opacity .5s;
+  transition: opacity .5s;
+}
+
+.gallery .control-operator {
+  display: none;
+}
+
+.gallery .control-operator:target ~ .item {
+  pointer-events: none;
+  opacity: 0;
+  -webkit-animation: none;
+  -o-animation: none;
+  animation: none;
+}
+
+.gallery .control-operator:target ~ .controls .control-button {
+  -webkit-animation: none;
+  -o-animation: none;
+  animation: none;
+}
+
+.gallery .control-operator:nth-of-type(1):target ~ .item:nth-of-type(1),
+.gallery .control-operator:nth-of-type(2):target ~ .item:nth-of-type(2),
+.gallery .control-operator:nth-of-type(3):target ~ .item:nth-of-type(3),
+.gallery .control-operator:nth-of-type(4):target ~ .item:nth-of-type(4),
+.gallery .control-operator:nth-of-type(5):target ~ .item:nth-of-type(5),
+.gallery .control-operator:nth-of-type(6):target ~ .item:nth-of-type(6),
+.gallery .control-operator:nth-of-type(7):target ~ .item:nth-of-type(7),
+.gallery .control-operator:nth-of-type(8):target ~ .item:nth-of-type(8),
+.gallery .control-operator:nth-of-type(9):target ~ .item:nth-of-type(9) {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.gallery {
+  width: 800px;
+  position: relative;
+}
+
+.gallery .item {
+  height: 600px;
+  overflow: hidden;
+  text-align: center;
+  background: #4d87e2;
+}
+
+.gallery .controls {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.gallery .control-button {
+  display: inline-block;
+  margin: 0 .05em;
+  font-size: 5em;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: color 1s;
+  -o-transition: color 1s;
+  transition: color 1s;
+}
